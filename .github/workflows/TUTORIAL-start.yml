@@ -14,7 +14,9 @@ jobs:
     container: ghcr.io/faasr/github-actions-r:dev
     env:
       TOKEN: ${{ secrets.TOKEN }}
-      SECRET_PAYLOAD: ${{ secrets.SECRET_PAYLOAD }}
+      My_GitHub_Account_PAT: ${{ secrets.MY_GITHUB_ACCOUNT_PAT }}
+      My_Minio_Bucket_AccessKey: ${{ secrets.MY_MINIO_BUCKET_ACCESSKEY }}
+      My_Minio_Bucket_SecretKey: ${{ secrets.MY_MINIO_BUCKET_SECRETKEY }}
       OVERWRITTEN: ${{ github.event.inputs.OVERWRITTEN }}
       PAYLOAD_URL: ${{ github.event.inputs.PAYLOAD_URL }}
     steps:
